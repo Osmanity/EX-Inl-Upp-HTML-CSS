@@ -9,6 +9,8 @@
   --hero-title-dark: #ffffff;
   --hero-paragraph-light: #565973;
   --hero-paragraph-dark: #ffffff;
+  --content-paragraph-light: #9397ad;
+  --content-item-paragraph-light: #565973;
 }
 
 body {
@@ -27,6 +29,12 @@ body {
 body.dark-mode {
   background-color: var(--background-dark);
   color: var(--text-dark);
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 /* ------------------------- Navbar ------------------------- */
@@ -263,11 +271,112 @@ body.dark-mode .hero-text-paragraph {
   align-items: center;
 }
 
-.appstore-download-img {
-}
+/* .appstore-download-img {
+} */
 
 .googleplay-download-img {
   margin-left: 24px;
+}
+
+/*------------------------- App Feature Section -------------------------*/
+
+.app-feature-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 100px;
+  gap: 24px;
+}
+
+/* .app-feature-logo {
+  height: 100px;
+  width: 196px;
+} */
+
+.app-feature-img {
+  margin-right: 100px;
+}
+
+.find {
+}
+
+.app-feature-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  width: 100%;
+}
+
+.app-feature-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1296px;
+}
+
+.app-feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: left;
+  width: 746px;
+}
+
+.app-feature-content-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.app-feature-content-paragraph {
+  justify-content: center;
+  align-self: center;
+  font-size: large;
+  color: var(--content-paragraph-light);
+}
+
+.feature-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.feature-item-img {
+  display: flex;
+  align-self: flex-start;
+  margin-right: 12px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+}
+
+.feature-item-content {
+  width: 261px;
+}
+
+.feature-item-content-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feature-item-content-paragraph {
+  font-size: medium;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--content-item-paragraph-light);
 }
 
 /*------------------------- Responsive Media Queries -------------------------*/
