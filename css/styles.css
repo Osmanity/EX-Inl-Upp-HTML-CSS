@@ -476,6 +476,170 @@ body.dark-mode .how-it-work-section {
   margin: 0;
 }
 
+/*------------------------- money-transfer Section -------------------------*/
+
+.money-transfer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  width: 100%;
+  height: 1176px;
+}
+
+.money-transfer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 876px;
+  width: 1296px;
+  gap: 100px;
+  /* width: 100%; */
+}
+
+.simple-transfer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.simple-transfer-info-img {
+  padding: 24px;
+  /* margin-left: 10px; */
+}
+
+.simple-transfer-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  width: 416px;
+}
+
+.simple-transfer-info-content-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.simple-transfer-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 341px;
+  margin-bottom: 48px;
+  margin-top: 24px;
+}
+
+.simple-transfer-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.simple-transfer-paragraph {
+  font-size: medium;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--content-paragraph-light);
+  margin: 0;
+}
+
+.simple-transfer-item-img {
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.simple-transfer-button-btn {
+  background-color: #6366f1;
+  padding: 11px 28px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.international-payment-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.international-payment-info-img {
+  /* padding: 24px; */
+  margin-right: 24px;
+}
+
+.international-payment-info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: left;
+  width: 416px;
+}
+
+.international-payment-info-content-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.international-payment-items {
+  display: flex;
+  flex-direction: row;
+}
+.international-payment-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.international-payment-item-img {
+  display: flex;
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+
+.international-payment-item-paragraph {
+  font-size: medium;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--content-paragraph-light);
+  margin: 0;
+  width: 243px;
+  margin-bottom: 40px;
+}
+
+.international-payment-button-btn {
+  background-color: #6366f1;
+  padding: 11px 28px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
 /*------------------------- Responsive Media Queries -------------------------*/
 /* tablet */
 @media only screen and (max-width: 1026px) {
