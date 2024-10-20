@@ -21,6 +21,8 @@
   --how-it-work-bg-color-dark: #151822;
   --client-bg-color-light: #f3f6ff;
   --client-bg-color-dark: #151822;
+  --accordion-bg-color-light: #ffffff;
+  --accordion-bg-color-dark: #151822;
 }
 
 body {
@@ -777,20 +779,219 @@ body.dark-mode .faq-testimonial-imgs-dark {
   gap: 24px;
 }
 body.dark-mode .faq-accordion-imgs {
-  display: none;
+  color: yellow;
 }
 
-.faq-accordion-imgs-dark {
-  display: none;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+.accordion-container {
+  width: 726px;
+  max-width: 726px;
 }
 
-body.dark-mode .faq-accordion-imgs-dark {
+.accordion-item {
+  background-color: var(--accordion-bg-color-light);
+  border: 1px solid #e0e0e0; /* Light border */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  transition: box-shadow 0.3s ease;
+}
+
+body.dark-mode .accordion-item {
+  background-color: var(--accordion-bg-color-dark);
+  border: 1px solid #333; /* Dark border */
+}
+
+.accordion-header {
+  background-color: var(--accordion-bg-color-light); /* Soft purple */
+  color: black; /* BLACK text */
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode .accordion-header {
+  background-color: var(--accordion-bg-color-dark);
+  color: white;
+}
+
+.accordion-header:hover {
+  background-color: #e3e3e3; /* Darker shade of purple */
+}
+
+.accordion-content {
+  background-color: var(
+    --accordion-bg-color-light
+  ); /* Very light grey for content */
+  overflow: hidden;
+  padding: 0 15px;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  border-radius: 8px;
+}
+
+body.dark-mode .accordion-content {
+  background-color: var(--accordion-bg-color-dark);
+}
+.accordion-content p {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  padding: 10px 10px;
+  background-color: #f3f6ff;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .icon {
+  background-color: #ffffff26;
+}
+
+.active .icon {
+  transform: rotate(180deg);
+  background-color: #6366f1;
+  padding: 10px 10px;
+  border-radius: 100%;
+  color: white;
+  fill: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .active .icon {
+  background-color: #6366f1;
+  box-shadow: 0 2px 5px rgba(157, 82, 206, 0.1);
+}
+
+/*------------------------- Subcribe Section -------------------------*/
+
+.subcribe-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1296px;
+}
+
+.subscribe-container {
+  display: flex;
+  background-color: var(--client-bg-color-light);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1296px;
+  height: 222px;
+  border-radius: 8px;
+  margin-bottom: 100px;
   gap: 24px;
-  /* padding: 10px; */
-  margin-left: 22px;
+}
+
+body.dark-mode .subscribe-container {
+  background-color: var(--client-bg-color-dark);
+  color: white;
+}
+
+.subscribe-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 130%;
+  /* font-family: "Manrope", sans-serif; */
+  width: 416px;
+}
+
+.subscribe-form {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 472px;
+  height: 52px;
+}
+
+body.dark-mode .subscribe-form {
+  background-color: #191d27;
+  color: rgba(255, 255, 255, 0.192);
+}
+
+.subscribe-container input[type="email"] {
+  border: none;
+  padding: 15px 0px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  border-radius: 8px 0 0 8px;
+  /* background-color: #3656b6; */
+}
+
+body.dark-mode .subscribe-container input[type="email"] {
+  background-color: #191d27;
+  color: rgba(101, 101, 101, 0.026);
+}
+
+.subcribe-img {
+  width: 24px;
+  height: 24px;
+  padding-left: 8px;
+  padding-right: 8px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.subscribe-container button {
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-container button:hover {
+  background-color: #4f46e5;
+}
+
+.subscribe-container input::placeholder {
+  color: #c4c4c4;
+}
+
+/*------------------------- copy-right Section -------------------------*/
+
+.copy-right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 1296px;
+}
+
+.copy-right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1296px;
+  margin-bottom: 100px;
 }
 
 /*------------------------- Responsive Media Queries -------------------------*/
