@@ -49,6 +49,7 @@ body.dark-mode {
   width: 100%;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* find the overflow problem peace by peace look into how to section to begin with */
 }
 
 /* ------------------------- Navbar ------------------------- */
@@ -239,6 +240,15 @@ body.dark-mode .meny-button svg {
   height: 876px;
   width: 1296px;
   /* width: 100%; */
+  margin: 0 20px;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
 }
 
 .hero-content {
@@ -260,6 +270,9 @@ body.dark-mode .meny-button svg {
   font-weight: bold;
   font-family: "display", sans-serif;
   color: var(--hero-title-light);
+}
+.hero-content-title-tablet {
+  display: none;
 }
 
 body.dark-mode .hero-content-title {
@@ -291,6 +304,7 @@ body.dark-mode .hero-text-paragraph {
 
 /*------------------------- App Feature Section -------------------------*/
 
+/* Default styling for large screens */
 .app-feature-logos {
   display: flex;
   flex-direction: row;
@@ -298,6 +312,7 @@ body.dark-mode .hero-text-paragraph {
   align-items: center;
   margin-bottom: 100px;
   gap: 24px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .app-feature-logo {
@@ -318,7 +333,7 @@ body.dark-mode .app-feature-logo {
 
 .app-feature-logo-img {
   height: 26px;
-  width: 114px;
+  max-width: 114px;
 }
 
 /* .app-feature-logo {
@@ -346,16 +361,18 @@ body.dark-mode .app-feature-logo {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1296px;
+  /* width: 1296px; */
+  width: auto;
 }
 
 .app-feature-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   text-align: left;
-  width: 746px;
+  max-width: 746px;
+  margin: 0 20px;
 }
 
 .app-feature-content-title {
@@ -372,8 +389,10 @@ body.dark-mode .app-feature-logo {
 
 .feature-items {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin: 30px 0;
+  /* margin: 30px 0; */
 }
 
 .feature-item-img {
@@ -997,6 +1016,7 @@ body.dark-mode .subscribe-container input[type="email"] {
 /*------------------------- Responsive Media Queries -------------------------*/
 /* tablet */
 @media only screen and (max-width: 1026px) {
+  /*------------------------- Navbar -------------------------*/
   .navbar-container {
     display: flex;
     flex: 1 1 0%;
@@ -1015,12 +1035,116 @@ body.dark-mode .subscribe-container input[type="email"] {
     justify-content: center;
     align-items: center;
   }
+
+  /*------------------------- Hero Section -------------------------*/
+  .hero-section {
+    margin-top: 95px;
+  }
+
   .hero-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    height: 100vh;
+
+    height: 618px;
+  }
+
+  .hero-content-title {
+    display: none;
+  }
+
+  .hero-content-title-tablet {
+    display: flex;
+    font-size: 44px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "display", sans-serif;
+    color: var(--hero-title-light);
+    width: 442px;
+  }
+
+  body.dark-mode .hero-content-title-tablet {
+    color: var(--hero-title-dark);
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    margin: 0 24px;
+    gap: 10px;
+  }
+
+  .hero-text-paragraph {
+    width: 270px;
+  }
+
+  .hero-img {
+    /* width: 40%; */
+    width: 388px;
+  }
+
+  /*------------------------- App feature Section -------------------------*/
+
+  .app-feature-logo:nth-child(n + 5) {
+    display: none;
+  }
+
+  .app-feature-img {
+    display: none;
+  }
+
+  .app-feature-section {
+    overflow: hidden;
+  }
+
+  .app-feature-content {
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .feature-items {
+    align-self: center;
+  }
+
+  .app-feature-content-title {
+    text-align: center;
+    width: 100%;
+  }
+
+  .app-feature-content-paragraph {
+    text-align: center;
+    width: 100%;
+  }
+
+  /*------------------------- How it works Section -------------------------*/
+
+  .how-it-work-imgs {
+  }
+
+  .how-it-work-content-paragraph {
+    text-align: center;
+    width: 100%;
+  }
+
+  /*------------------------- money-transfer Section -------------------------*/
+
+  .money-transfer-section {
+    display: none;
+  }
+
+  /*------------------------- Client Section -------------------------*/
+  .client-section {
+    display: none;
+  }
+
+  /*------------------------- faq Section -------------------------*/
+
+  .faq-left-content {
+    display: none;
   }
 }
 
@@ -1032,5 +1156,18 @@ body.dark-mode .subscribe-container input[type="email"] {
 
   .navbar-container {
     padding: 5px 10px;
+  }
+}
+
+/* custom media */
+@media only screen and (max-width: 1287px) {
+  .app-feature-img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1340px) {
+  .faq-left-content {
+    display: none;
   }
 }
